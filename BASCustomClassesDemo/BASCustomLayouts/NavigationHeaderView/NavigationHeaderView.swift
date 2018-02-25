@@ -16,8 +16,9 @@ import UIKit
 class NavigationHeaderView: UIView {
 
     //Outlets
-    @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var rightButton: UIButton!
     //Variables
     var view: UIView!
   @IBOutlet weak var Navigationdelegate:NavigationHeaderDelegate?
@@ -37,6 +38,40 @@ class NavigationHeaderView: UIView {
             lblTitle.textColor = TitleColor
         }
        
+    }
+    
+    
+    @IBInspectable var hideLeftButton: Bool = false {
+        didSet{
+            if hideLeftButton == true {
+                self.leftButton.isHidden = true
+            } else {
+                self.leftButton.isHidden = false
+            }
+        }
+    }
+    
+    @IBInspectable var hideRightButton: Bool = false {
+        didSet{
+            if hideRightButton == true {
+                self.rightButton.isHidden = true
+            } else {
+                self.rightButton.isHidden = false
+            }
+        }
+    }
+    
+    
+    @IBInspectable var leftButtonImage: UIImage? {
+        didSet{
+            leftButton.setImage(leftButtonImage, for: .normal)
+        }
+    }
+    
+    @IBInspectable var rightButtonImage: UIImage? {
+        didSet{
+            rightButton.setImage(rightButtonImage, for: .normal)
+        }
     }
     
     override init(frame: CGRect  ) {
