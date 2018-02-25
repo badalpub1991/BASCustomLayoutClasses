@@ -7,23 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F2166EE20422EAA006586F7 /* BASCustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2166ED20422EAA006586F7 /* BASCustomUIImageView.swift */; };
+		5F2166F020423188006586F7 /* BASCustomUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2166EF20423188006586F7 /* BASCustomUILabel.swift */; };
+		5F2166F2204234B2006586F7 /* BASCustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2166F1204234B2006586F7 /* BASCustomUIView.swift */; };
 		5F2E77EA20338C3B0066137E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2E77E920338C3B0066137E /* AppDelegate.swift */; };
-		5F2E77EC20338C3B0066137E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2E77EB20338C3B0066137E /* ViewController.swift */; };
+		5F2E77EC20338C3B0066137E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2E77EB20338C3B0066137E /* BaseVC.swift */; };
 		5F2E77EF20338C3B0066137E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F2E77ED20338C3B0066137E /* Main.storyboard */; };
 		5F2E77F220338C3B0066137E /* BASCustomClassesDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F2E77F020338C3B0066137E /* BASCustomClassesDemo.xcdatamodeld */; };
 		5F2E77F420338C3B0066137E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F2E77F320338C3B0066137E /* Assets.xcassets */; };
 		5F2E77F720338C3B0066137E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F2E77F520338C3B0066137E /* LaunchScreen.storyboard */; };
+		5F2E780420338CB00066137E /* BASCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2E780220338CAF0066137E /* BASCustomView.swift */; };
+		5F2E780520338CB00066137E /* BASCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2E780320338CAF0066137E /* BASCustomTextField.swift */; };
+		5F2E780920338DBE0066137E /* NavigationHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F2E780720338DBD0066137E /* NavigationHeaderView.xib */; };
+		5F2E780A20338DBE0066137E /* NavigationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2E780820338DBD0066137E /* NavigationHeaderView.swift */; };
+		5FA934D9203CB3C300E272ED /* BaseVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA934D8203CB3C300E272ED /* BaseVCCell.swift */; };
+		5FA934DB203CB70D00E272ED /* NavigationTextFieldDemoVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA934DA203CB70D00E272ED /* NavigationTextFieldDemoVc.swift */; };
+		5FA934DE203CB79500E272ED /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA934DD203CB79500E272ED /* Constant.swift */; };
+		5FA934E0203CDDD300E272ED /* BASCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA934DF203CDDD300E272ED /* BASCustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F2166ED20422EAA006586F7 /* BASCustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASCustomUIImageView.swift; sourceTree = "<group>"; };
+		5F2166EF20423188006586F7 /* BASCustomUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASCustomUILabel.swift; sourceTree = "<group>"; };
+		5F2166F1204234B2006586F7 /* BASCustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASCustomUIView.swift; sourceTree = "<group>"; };
 		5F2E77E620338C3A0066137E /* BASCustomClassesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BASCustomClassesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2E77E920338C3B0066137E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F2E77EB20338C3B0066137E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5F2E77EB20338C3B0066137E /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		5F2E77EE20338C3B0066137E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F2E77F120338C3B0066137E /* BASCustomClassesDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BASCustomClassesDemo.xcdatamodel; sourceTree = "<group>"; };
 		5F2E77F320338C3B0066137E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F2E77F620338C3B0066137E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F2E77F820338C3B0066137E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F2E780220338CAF0066137E /* BASCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASCustomView.swift; sourceTree = "<group>"; };
+		5F2E780320338CAF0066137E /* BASCustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BASCustomTextField.swift; sourceTree = "<group>"; };
+		5F2E780720338DBD0066137E /* NavigationHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationHeaderView.xib; sourceTree = "<group>"; };
+		5F2E780820338DBD0066137E /* NavigationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationHeaderView.swift; sourceTree = "<group>"; };
+		5FA934D8203CB3C300E272ED /* BaseVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCCell.swift; sourceTree = "<group>"; };
+		5FA934DA203CB70D00E272ED /* NavigationTextFieldDemoVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTextFieldDemoVc.swift; sourceTree = "<group>"; };
+		5FA934DD203CB79500E272ED /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		5FA934DF203CDDD300E272ED /* BASCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASCustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +78,12 @@
 		5F2E77E820338C3B0066137E /* BASCustomClassesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5FA934DC203CB77D00E272ED /* Utilities */,
+				5F2E780120338C880066137E /* BASCustomLayouts */,
+				5F2E780020338C520066137E /* Model */,
+				5F2E77FF20338C4D0066137E /* View */,
+				5F2E77FE20338C410066137E /* Controller */,
 				5F2E77E920338C3B0066137E /* AppDelegate.swift */,
-				5F2E77EB20338C3B0066137E /* ViewController.swift */,
 				5F2E77ED20338C3B0066137E /* Main.storyboard */,
 				5F2E77F320338C3B0066137E /* Assets.xcassets */,
 				5F2E77F520338C3B0066137E /* LaunchScreen.storyboard */,
@@ -65,6 +91,61 @@
 				5F2E77F020338C3B0066137E /* BASCustomClassesDemo.xcdatamodeld */,
 			);
 			path = BASCustomClassesDemo;
+			sourceTree = "<group>";
+		};
+		5F2E77FE20338C410066137E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F2E77EB20338C3B0066137E /* BaseVC.swift */,
+				5FA934DA203CB70D00E272ED /* NavigationTextFieldDemoVc.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F2E77FF20338C4D0066137E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5FA934D8203CB3C300E272ED /* BaseVCCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F2E780020338C520066137E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5F2E780120338C880066137E /* BASCustomLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				5F2E780620338D7B0066137E /* NavigationHeaderView */,
+				5F2E780320338CAF0066137E /* BASCustomTextField.swift */,
+				5F2E780220338CAF0066137E /* BASCustomView.swift */,
+				5FA934DF203CDDD300E272ED /* BASCustomButton.swift */,
+				5F2166ED20422EAA006586F7 /* BASCustomUIImageView.swift */,
+				5F2166EF20423188006586F7 /* BASCustomUILabel.swift */,
+				5F2166F1204234B2006586F7 /* BASCustomUIView.swift */,
+			);
+			path = BASCustomLayouts;
+			sourceTree = "<group>";
+		};
+		5F2E780620338D7B0066137E /* NavigationHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				5F2E780820338DBD0066137E /* NavigationHeaderView.swift */,
+				5F2E780720338DBD0066137E /* NavigationHeaderView.xib */,
+			);
+			path = NavigationHeaderView;
+			sourceTree = "<group>";
+		};
+		5FA934DC203CB77D00E272ED /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5FA934DD203CB79500E272ED /* Constant.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F2E77F720338C3B0066137E /* LaunchScreen.storyboard in Resources */,
+				5F2E780920338DBE0066137E /* NavigationHeaderView.xib in Resources */,
 				5F2E77F420338C3B0066137E /* Assets.xcassets in Resources */,
 				5F2E77EF20338C3B0066137E /* Main.storyboard in Resources */,
 			);
@@ -139,8 +221,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2166F020423188006586F7 /* BASCustomUILabel.swift in Sources */,
+				5FA934D9203CB3C300E272ED /* BaseVCCell.swift in Sources */,
+				5F2166EE20422EAA006586F7 /* BASCustomUIImageView.swift in Sources */,
+				5F2166F2204234B2006586F7 /* BASCustomUIView.swift in Sources */,
 				5F2E77F220338C3B0066137E /* BASCustomClassesDemo.xcdatamodeld in Sources */,
-				5F2E77EC20338C3B0066137E /* ViewController.swift in Sources */,
+				5FA934DE203CB79500E272ED /* Constant.swift in Sources */,
+				5FA934E0203CDDD300E272ED /* BASCustomButton.swift in Sources */,
+				5FA934DB203CB70D00E272ED /* NavigationTextFieldDemoVc.swift in Sources */,
+				5F2E780A20338DBE0066137E /* NavigationHeaderView.swift in Sources */,
+				5F2E780520338CB00066137E /* BASCustomTextField.swift in Sources */,
+				5F2E77EC20338C3B0066137E /* BaseVC.swift in Sources */,
+				5F2E780420338CB00066137E /* BASCustomView.swift in Sources */,
 				5F2E77EA20338C3B0066137E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

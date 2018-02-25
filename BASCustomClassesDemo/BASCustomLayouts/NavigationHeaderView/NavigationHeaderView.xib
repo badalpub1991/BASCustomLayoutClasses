@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationHeaderView" customModule="BASCustomClassesDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="btnBack" destination="5HL-6j-bqE" id="a6Y-hx-9yE"/>
+                <outlet property="lblTitle" destination="ebh-my-5FB" id="gQU-nM-302"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HL-6j-bqE">
+                    <rect key="frame" x="8" y="16" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="G1c-y2-ezh"/>
+                        <constraint firstAttribute="height" constant="40" id="O49-PD-P4C"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    <state key="normal" image="backIcon"/>
+                    <connections>
+                        <action selector="NavigationButtonWasPressedWithButton:" destination="-1" eventType="touchUpInside" id="Le8-gL-yYP"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebh-my-5FB">
+                    <rect key="frame" x="170.5" y="30.5" width="34" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deb-YZ-IpP">
+                    <rect key="frame" x="327" y="16" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="GbK-ag-nna"/>
+                        <constraint firstAttribute="height" constant="40" id="hOD-Dk-Wpt"/>
+                    </constraints>
+                    <connections>
+                        <action selector="NavigationButtonWasPressed:" destination="-1" eventType="touchUpInside" id="RVI-ii-QeN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeB-FQ-91P">
+                    <rect key="frame" x="327" y="16" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="6qg-2J-yAE"/>
+                        <constraint firstAttribute="width" constant="40" id="G6A-Fc-5oU"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    <state key="normal" image="close"/>
+                    <connections>
+                        <action selector="NavigationButtonWasPressedWithButton:" destination="-1" eventType="touchUpInside" id="Qkd-Iw-5wk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" name="BackGroundDarkGray"/>
+            <constraints>
+                <constraint firstItem="ebh-my-5FB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="04r-na-wuG"/>
+                <constraint firstItem="deb-YZ-IpP" firstAttribute="top" secondItem="5HL-6j-bqE" secondAttribute="top" id="0OZ-uk-beM"/>
+                <constraint firstItem="ebh-my-5FB" firstAttribute="centerY" secondItem="5HL-6j-bqE" secondAttribute="centerY" constant="5" id="2G7-kv-zE9"/>
+                <constraint firstItem="5HL-6j-bqE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="ARz-q4-wON"/>
+                <constraint firstItem="deb-YZ-IpP" firstAttribute="bottom" secondItem="5HL-6j-bqE" secondAttribute="bottom" id="Baq-im-DYJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="deb-YZ-IpP" secondAttribute="trailing" constant="8" id="Hll-A4-3UJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EeB-FQ-91P" secondAttribute="trailing" constant="8" id="IYN-Xo-PaL"/>
+                <constraint firstItem="EeB-FQ-91P" firstAttribute="top" secondItem="5HL-6j-bqE" secondAttribute="top" id="JCZ-r7-nFN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5HL-6j-bqE" secondAttribute="bottom" constant="8" id="n3E-Le-wxi"/>
+                <constraint firstItem="EeB-FQ-91P" firstAttribute="bottom" secondItem="5HL-6j-bqE" secondAttribute="bottom" id="nbP-3P-J63"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="deb-YZ-IpP" secondAttribute="bottom" constant="8" id="woB-Le-PYe"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backIcon" width="12" height="22"/>
+        <image name="close" width="21" height="20"/>
+        <namedColor name="BackGroundDarkGray">
+            <color red="0.16099999845027924" green="0.16899999976158142" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

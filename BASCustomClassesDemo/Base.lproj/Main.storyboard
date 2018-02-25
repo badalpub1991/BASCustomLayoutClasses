@@ -1,24 +1,415 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n2m-Xb-8CC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Menlo.ttc">
+            <string>Menlo-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--BaseVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BaseVC" customModule="BASCustomClassesDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACc-CO-SP5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_basCustomLayout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnV-1G-tPW">
+                                        <rect key="frame" x="105.5" y="30" width="164" height="20"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                        <color key="textColor" name="TabGlobalTint"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BackGroundDarkGray"/>
+                                <constraints>
+                                    <constraint firstItem="jnV-1G-tPW" firstAttribute="centerX" secondItem="ACc-CO-SP5" secondAttribute="centerX" id="5z5-Cs-xfj"/>
+                                    <constraint firstAttribute="height" constant="70" id="aV8-ba-UGT"/>
+                                    <constraint firstAttribute="bottom" secondItem="jnV-1G-tPW" secondAttribute="bottom" constant="20" id="za4-qw-3jI"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hyI-IM-sHK">
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BaseVCCell" id="K7d-p0-BuI" customClass="BaseVCCell" customModule="BASCustomClassesDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K7d-p0-BuI" id="coY-8I-wsR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nm9-o2-RH5">
+                                                    <rect key="frame" x="0.0" y="42.5" width="375" height="1"/>
+                                                    <color key="backgroundColor" name="TextThealishBlue"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="1Aq-ga-lNb"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Navigation HeaderView Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAx-cz-SqF">
+                                                    <rect key="frame" x="70.5" y="13" width="235" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
+                                                    <color key="textColor" name="LoginTextGreenColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Nm9-o2-RH5" secondAttribute="trailing" id="fzH-JQ-I7A"/>
+                                                <constraint firstAttribute="bottom" secondItem="Nm9-o2-RH5" secondAttribute="bottom" id="te8-yp-ReR"/>
+                                                <constraint firstItem="FAx-cz-SqF" firstAttribute="centerY" secondItem="coY-8I-wsR" secondAttribute="centerY" id="uYK-sC-MSr"/>
+                                                <constraint firstItem="FAx-cz-SqF" firstAttribute="centerX" secondItem="coY-8I-wsR" secondAttribute="centerX" id="wdT-Xd-Tf4"/>
+                                                <constraint firstItem="Nm9-o2-RH5" firstAttribute="leading" secondItem="coY-8I-wsR" secondAttribute="leading" id="ycX-CC-pWh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="lblCellText" destination="FAx-cz-SqF" id="4wH-Iw-aqb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mZK-gj-qod"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="h4A-nR-Mhd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackGroundLightGray"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hyI-IM-sHK" secondAttribute="trailing" id="FZn-qE-Lhs"/>
+                            <constraint firstItem="ACc-CO-SP5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MPM-uw-C1a"/>
+                            <constraint firstItem="ACc-CO-SP5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TwF-cH-PyW"/>
+                            <constraint firstItem="hyI-IM-sHK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YkV-RY-PwL"/>
+                            <constraint firstItem="ACc-CO-SP5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gVb-7q-A5g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hyI-IM-sHK" secondAttribute="bottom" id="h57-tr-D1n"/>
+                            <constraint firstItem="hyI-IM-sHK" firstAttribute="top" secondItem="ACc-CO-SP5" secondAttribute="bottom" id="wTe-BK-Ll1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7SO-i0-fB4"/>
+                    <connections>
+                        <outlet property="tableView" destination="hyI-IM-sHK" id="Xbq-cU-YX6"/>
+                        <segue destination="MHx-fg-FMk" kind="show" identifier="navigationTextfiled" id="ytp-i1-QMA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-733.60000000000002" y="-183.05847076461771"/>
+        </scene>
+        <!--Navigationdelegate-->
+        <scene sceneID="LLj-PO-m5O">
+            <objects>
+                <viewController storyboardIdentifier="Navigation_TextFieldDemoVc" id="MHx-fg-FMk" customClass="NavigationTextFieldDemoVc" customModule="BASCustomClassesDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gJr-V5-ofX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNl-Tb-gdM" customClass="NavigationHeaderView" customModule="BASCustomClassesDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                                <color key="backgroundColor" name="BackGroundDarkGray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="sWY-yN-Jht"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="navigationTitle" value="Custom Navigation"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="TitleColor">
+                                        <color key="value" name="TabGlobalTint"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="Navigationdelegate" destination="MHx-fg-FMk" id="ST3-wV-PbY"/>
+                                </connections>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="jH6-Am-yqp">
+                                <rect key="frame" x="25" y="333.5" width="325" height="200"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PlaceHolder 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vM9-lg-0XM" customClass="BASCustomTextField" customModule="BASCustomClassesDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="yIf-IB-wtR"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="checkicon"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="hearticon"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" name="LoginTextGreenColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="cursorColor">
+                                                <color key="value" name="LoginTextGreenColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="TabGlobalTint"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornorRadious">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PlaceHolder 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uwO-xE-Xfx" customClass="BASCustomTextField" customModule="BASCustomClassesDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="75" width="325" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hwS-jW-oao"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="checkicon"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="hearticon"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                <real key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" name="LoginTextGreenColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="cursorColor">
+                                                <color key="value" name="LoginTextGreenColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="TabGlobalTint"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornorRadious">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thY-A1-Vio" customClass="BASCustomButton" customModule="BASCustomClassesDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="150" width="325" height="50"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="0.84947559931506844" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mV2-se-Iht"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                        <state key="normal" title="SUBMIT">
+                                            <color key="titleColor" name="TabGlobalTint"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="TabGlobalTint"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornorRadious">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" name="TabGlobalTint"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="submitBtnPressed:" destination="MHx-fg-FMk" eventType="touchUpInside" id="IiT-V9-m5a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="AS8-Fe-ag6" customClass="BASCustomUIImageView" customModule="BASCustomClassesDemo" customModuleProvider="target">
+                                <rect key="frame" x="127" y="129" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Qxk-kH-MTW"/>
+                                    <constraint firstAttribute="width" constant="120" id="cn1-mF-ifK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundImageView" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="TabGlobalTint"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="TabGlobalTint"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadious">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffSet">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Click on Submit Button to View Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-dz-45I" customClass="BASCustomUILabel" customModule="BASCustomClassesDemo" customModuleProvider="target">
+                                <rect key="frame" x="25" y="559" width="325" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="F20-gg-MKl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" name="TabGlobalTint"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="TabGlobalTint"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornorRadious">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadious">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCj-vA-z96" customClass="BASCustomUIView" customModule="BASCustomClassesDemo" customModuleProvider="target">
+                                <rect key="frame" x="25" y="593" width="325" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="rJ5-fb-Puu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                        <color key="value" name="TabGlobalTint"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                        <color key="value" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BackGroundLightGray"/>
+                        <constraints>
+                            <constraint firstItem="JRs-dz-45I" firstAttribute="top" secondItem="jH6-Am-yqp" secondAttribute="bottom" constant="25.5" id="2fa-nh-tII"/>
+                            <constraint firstItem="JRs-dz-45I" firstAttribute="trailing" secondItem="thY-A1-Vio" secondAttribute="trailing" id="70M-06-ULl"/>
+                            <constraint firstItem="eCj-vA-z96" firstAttribute="trailing" secondItem="JRs-dz-45I" secondAttribute="trailing" id="AyR-Uz-Mf4"/>
+                            <constraint firstItem="AS8-Fe-ag6" firstAttribute="top" secondItem="PNl-Tb-gdM" secondAttribute="bottom" constant="45" id="CAg-qY-SmP"/>
+                            <constraint firstItem="AS8-Fe-ag6" firstAttribute="centerX" secondItem="gJr-V5-ofX" secondAttribute="centerX" id="HHw-Pd-5Qq"/>
+                            <constraint firstItem="LyI-DW-i5X" firstAttribute="trailing" secondItem="PNl-Tb-gdM" secondAttribute="trailing" id="LJs-Nx-Btf"/>
+                            <constraint firstItem="PNl-Tb-gdM" firstAttribute="top" secondItem="LyI-DW-i5X" secondAttribute="top" id="WXb-9A-HEX"/>
+                            <constraint firstItem="jH6-Am-yqp" firstAttribute="top" secondItem="gJr-V5-ofX" secondAttribute="centerY" id="fnV-Gm-nQi"/>
+                            <constraint firstItem="JRs-dz-45I" firstAttribute="leading" secondItem="thY-A1-Vio" secondAttribute="leading" id="kuq-qn-xDh"/>
+                            <constraint firstItem="jH6-Am-yqp" firstAttribute="leading" secondItem="LyI-DW-i5X" secondAttribute="leading" constant="25" id="qct-3V-u1h"/>
+                            <constraint firstItem="PNl-Tb-gdM" firstAttribute="leading" secondItem="LyI-DW-i5X" secondAttribute="leading" id="rz5-UH-uVB"/>
+                            <constraint firstItem="LyI-DW-i5X" firstAttribute="trailing" secondItem="jH6-Am-yqp" secondAttribute="trailing" constant="25" id="ucH-FN-jbf"/>
+                            <constraint firstItem="eCj-vA-z96" firstAttribute="leading" secondItem="JRs-dz-45I" secondAttribute="leading" id="vad-Dj-AdO"/>
+                            <constraint firstItem="eCj-vA-z96" firstAttribute="top" secondItem="JRs-dz-45I" secondAttribute="bottom" constant="9" id="z1p-Uv-0jO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LyI-DW-i5X"/>
+                    </view>
+                    <connections>
+                        <outlet property="placeHolder1" destination="vM9-lg-0XM" id="vlf-7Y-kJA"/>
+                        <outlet property="placeHolder2" destination="uwO-xE-Xfx" id="DaF-ug-dy8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8OI-lS-Hhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.799999999999997" y="-183.05847076461771"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="B3z-2W-QuP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="n2m-Xb-8CC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ohb-5F-TIN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Mzw-o0-mYB" kind="relationship" relationship="rootViewController" id="MoZ-7i-fDh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMT-aj-l9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1714" y="32"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kpC-tH-JqR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Mzw-o0-mYB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="sgU-Em-hZw"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WdA-B4-GeH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lW1-Hg-kMp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcJ-3Z-Hkq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1599" y="-155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkicon" width="16" height="13"/>
+        <image name="defaultProfileImage" width="102" height="102"/>
+        <image name="hearticon" width="15" height="12"/>
+        <namedColor name="BackGroundDarkGray">
+            <color red="0.16099999845027924" green="0.16899999976158142" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackGroundLightGray">
+            <color red="0.25499999523162842" green="0.27099999785423279" blue="0.31400001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LoginTextGreenColor">
+            <color red="0.56099998949999996" green="0.81199997660000001" blue="0.30599999430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TabGlobalTint">
+            <color red="0.016000000760000001" green="0.67100000380000002" blue="0.77300000189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TabGlobalTint">
+            <color red="0.016000000759959221" green="0.67100000381469727" blue="0.77300000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TabGlobalTint">
+            <color red="0.016000000760000001" green="0.67100000380000002" blue="0.77300000189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TabGlobalTint">
+            <color red="0.016000000760000001" green="0.67100000380000002" blue="0.77300000189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TabGlobalTint">
+            <color red="0.016000000760000001" green="0.67100000380000002" blue="0.77300000189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TabGlobalTint">
+            <color red="0.016000000760000001" green="0.67100000380000002" blue="0.77300000189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextThealishBlue">
+            <color red="0.016000000759959221" green="0.67100000381469727" blue="0.77300000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
