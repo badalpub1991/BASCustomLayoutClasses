@@ -130,9 +130,12 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hideLeftButton" value="NO"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hideRightButton" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="rightButtonImage" value="backIcon"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="defaultLeftImage" value="checkicon"/>
                                     <userDefinedRuntimeAttribute type="image" keyPath="defaultRightImage" value="background_character"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightButtonTitle" value="Next"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="Navigationdelegate" destination="MHx-fg-FMk" id="ST3-wV-PbY"/>
@@ -344,10 +347,10 @@
             </objects>
             <point key="canvasLocation" x="96.799999999999997" y="-183.05847076461771"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigationdelegate-->
         <scene sceneID="0Sq-lg-Pum">
             <objects>
-                <viewController id="zGs-Zo-10f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPushedVC" id="zGs-Zo-10f" customClass="NewPushedVC" customModule="BASCustomClassesDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="abX-dg-mSx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,9 +366,10 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="TitleColor">
                                         <color key="value" red="0.4039215686" green="0.82352941180000006" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightButtonImage" value="close"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="Navigationdelegate" destination="MHx-fg-FMk" id="kNv-GW-jSM"/>
+                                    <outlet property="Navigationdelegate" destination="zGs-Zo-10f" id="dgM-lD-M4b"/>
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Navigation with Different image and HeaderTitle" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlv-D8-1n1">
@@ -430,19 +434,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backIcon" width="12" height="22"/>
         <image name="background_character" width="242" height="233"/>
         <image name="checkicon" width="16" height="13"/>
+        <image name="close" width="21" height="20"/>
         <image name="defaultProfileImage" width="102" height="102"/>
         <image name="hearticon" width="15" height="12"/>
         <namedColor name="BackGroundDarkGray">
             <color red="0.16099999849999999" green="0.16899999979999999" blue="0.20399999620000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BackGroundDarkGray">
-            <color red="0.16099999845027924" green="0.16899999976158142" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BackGroundLightGray">
-            <color red="0.25499999523162842" green="0.27099999785423279" blue="0.31400001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BackGroundLightGray">
             <color red="0.25499999523162842" green="0.27099999785423279" blue="0.31400001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -452,9 +450,6 @@
         </namedColor>
         <namedColor name="TabGlobalTint">
             <color red="0.016000000759959221" green="0.67100000381469727" blue="0.77300000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="TabGlobalTint">
-            <color red="0.016000000760000001" green="0.67100000380000002" blue="0.77300000189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TextThealishBlue">
             <color red="0.016000000759959221" green="0.67100000381469727" blue="0.77300000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

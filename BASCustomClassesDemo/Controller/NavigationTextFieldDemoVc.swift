@@ -28,6 +28,9 @@ class NavigationTextFieldDemoVc: UIViewController , NavigationHeaderDelegate{
     func didPressButton(senderTag:Int) {
         if senderTag == 0 {
             self.navigationController?.popViewController(animated: true)
+        } else {
+            let newPushedVC = storyboard?.instantiateViewController(withIdentifier: "NewPushedVC") as! NewPushedVC
+            self.navigationController?.pushViewController(newPushedVC, animated: true)
         }
     }
 }
